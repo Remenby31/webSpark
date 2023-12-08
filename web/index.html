@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Big Data Upload Interface</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Big Data Interface</h1>
+
+        <h2>Upload</h2>
+
+        <!-- Formulaire pour charger des données -->
+        <form id="dataUploadForm">
+            <label for="dataFile">Charger des Données:</label>
+            <input type="file" id="dataFile" name="dataFile" />
+            <button type="submit">Charger</button>
+        </form>
+        
+        <!-- Formulaire pour charger une application Spark -->
+        <form id="appUploadForm">
+            <label for="appFile">Charger une Application Spark:</label>
+            <input type="file" id="appFile" name="appFile" />
+            <button type="submit">Charger</button>
+        </form>
+
+        <h2>Execution</h2>
+
+        <!-- Formulaire pour exécuter le code -->
+        <form id="runForm">
+            <button type="button" onclick="runCode()">Exécuter le Code</button>
+        </form>
+
+        <h2>Outputs</h2>
+
+        <!-- On affiche la variable outputResult-->
+        <div id="outputResult"></div>
+
+        <form id="runForm">
+            <button type="button" onclick="checkOutput()">Vérifier les Outputs</button>
+        </form>
+
+        <form id="runForm">
+            <button type="button" onclick="downloadOutput()">Download</button>
+        </form>
+
+        
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
