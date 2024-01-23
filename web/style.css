@@ -97,3 +97,117 @@ form button:hover {
     margin: 6px auto; /* Marge au-dessus et centrage horizontal */
     box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
 }
+
+/* Styles pour la liste déroulante */
+select {
+    width: 100%; /* La largeur de l'élément est maintenant la largeur totale incluant le padding et la bordure */
+    padding: 10px;
+    margin-bottom: 20px; /* Espace en dessous de l'élément */
+    border-radius: 10px; /* Bords arrondis */
+    border: 1px solid #ccccccd7; /* Bordure avec une couleur légèrement transparente */
+    background-color: rgba(255, 255, 255, 0.8); /* Fond blanc légèrement transparent */
+    color: #333; /* Couleur du texte */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Petite ombre interne pour donner de la profondeur */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur de l'élément */
+    font-size: 1.1em; /* Taille du texte */
+    cursor: pointer; /* Style du curseur */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transition douce pour les interactions */
+}
+
+select:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Fond un peu moins transparent au survol */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15); /* Ombre interne plus marquée au survol */
+}
+
+select:focus {
+    outline: none; /* Supprime la bordure de focus par défaut */
+    border: 2px solid #eefb3b; /* Bordure plus épaisse et colorée lors de la sélection */
+    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.2); /* Ombre interne plus profonde lors de la sélection */
+}
+
+/* Styles pour les boutons d'actualisation */
+.select-group button {
+    width: auto; /* Taille automatique en fonction du contenu */
+    padding: 10px 15px;
+    margin-top: 10px; /* Espace au-dessus du bouton */
+    border: none;
+    border-radius: 5px;
+    background-color: #eefb3bae; /* Couleur de fond légèrement transparente */
+    color: rgba(0, 0, 0, 0.412); /* Couleur du texte semi-transparente */
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.select-group button:hover {
+    background-color: #eefb3b; /* Couleur de fond plus intense au survol */
+    color: #333; /* Couleur du texte plus foncée */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transform: translateY(-2px); /* Légère élévation au survol */
+}
+
+.select-group button:active {
+    transform: translateY(1px); /* Effet enfoncé lors du clic */
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+
+.form-group button {
+    /* Mêmes styles que les autres boutons */
+    width: auto;
+    padding: 10px 15px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #eefb3bae;
+    color: rgba(0, 0, 0, 0.412);
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #eefb3b;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transform: translateY(-2px);
+}
+
+.form-group button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+.refresh-button {
+    background-image: url('refresh.png'); /* Remplacez par le chemin réel de votre image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px; /* Ajustez selon la taille de votre icône */
+    height: 40px; /* Ajustez selon la taille de votre icône */
+    border: none;
+    cursor: pointer;
+    align-self: center; /* Centrage vertical du bouton dans le conteneur flex */
+
+}
+
+/* Styles optionnels pour le survol */
+.refresh-button:hover {
+    /* Par exemple, légère opacité ou changement de couleur de fond */
+    opacity: 0.9;
+}
+
+.select-and-refresh {
+    display: flex;
+    align-items: center; /* Alignement vertical des éléments dans le conteneur flex */
+    justify-content: space-between; /* Espacement entre le select et le bouton */
+}
+
+.select-group select {
+    flex-grow: 1; /* Le select prend toute la largeur disponible */
+    margin-right: 10px; /* Espace entre le select et le bouton */
+}
+
+

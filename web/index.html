@@ -10,26 +10,52 @@
 
         <h2>Upload</h2>
 
-        <!-- Formulaire pour charger des données -->
+        <!-- Formulaire pour charger des données App -->
         <form id="dataUploadForm">
             <label for="dataFile">Charger des Données:</label>
             <input type="file" id="dataFile" name="dataFile" />
-            <button type="submit">Charger</button>
         </form>
         
-        <!-- Formulaire pour charger une application Spark -->
+        <!-- Formulaire pour charger des fichiers App -->
         <form id="appUploadForm">
-            <label for="appFile">Charger une Application Spark:</label>
+            <label for="appFile">Charger un Fichier App:</label>
             <input type="file" id="appFile" name="appFile" />
-            <button type="submit">Charger</button>
         </form>
 
-        <h2>Execution</h2>
 
-        <!-- Formulaire pour exécuter le code -->
-        <form id="runForm">
-            <button type="button" onclick="runCode()">Exécuter le Code</button>
-        </form>
+        <div class="execution-section">
+            <h2>Execution</h2>
+        
+            <div class="select-group">
+                <!-- On affiche la variable fileListData-->
+                <label for="fileListData">Choisissez un fichier sample :</label>
+                <div class="select-and-refresh">
+                    <select id="fileListData">
+                        <option value="">Sélectionnez un fichier sample...</option>
+                    </select>
+                    <button type="button" class="refresh-button" id="refresh-button-data"></button>
+                </div>
+            </div>
+        
+            <div class="select-group">
+                <!-- On affiche la variable fileListApp-->
+                <label for="fileListApp">Choisissez un code Java :</label>
+                <div class="select-and-refresh">
+                    <select id="fileListApp">
+                        <option value="">Sélectionnez un code Java...</option>
+                    </select>
+                    <button type="button" class="refresh-button" id="refresh-button-app"></button>
+                </div>
+            </div>
+        
+            <!-- Formulaire pour exécuter le code -->
+            <div class="form-group">
+                <form id="runForm">
+                    <button type="button" onclick="runCode()">Exécuter le Code</button>
+                </form>
+            </div>
+        </div>
+        
 
         <h2>Outputs</h2>
 
@@ -44,10 +70,9 @@
             <button type="button" onclick="downloadOutput()">Download</button>
         </form>
 
-        
-
     </div>
 
-    <script src="script.js"></script>
+    <script src="script_listener.js"></script>
+    <script src="script_functions.js"></script>
 </body>
 </html>
